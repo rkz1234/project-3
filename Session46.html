@@ -1,0 +1,110 @@
+<html>
+<head>
+    <
+    <style>
+         @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+         @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Oswald:wght@300&display=swap');
+        body{
+            text-align: center;
+            background: linear-gradient( 90deg, #5C258D, #4389A2);
+            color: cyan;
+        }
+        .h1{
+            font-size: 72px;
+            font-family: Lobster;
+        }
+        .question{
+            font-family: Oswald;
+            font-size: 40px;
+        }
+        .questioncard{
+            background-color: white;
+            color: purple;
+            width: 400px;
+            padding-bottom: 10px;
+            margin: auto;
+            border-radius: 10px;
+        }
+        .submit{
+            color: white;
+            background-color: orange;
+            width: 100px;
+            height: 50px;
+            border-radius: 30px;
+        }
+    </style>
+    </head>
+    <body>
+        <h1 class="h1">QU📍ZZERS</h1>
+        <div class="questioncard">
+            <p class="question">1. What is HTML?</p>
+            <input name="HTML" type="radio" value="Hyper Text Markup Language" ><label>Hyper Text Markup Language</label><br>
+            <input name="HTML" type="radio" value="Hyper Text Madeup Language" ><label>Hyper Text Madeup Language</label><br>
+            <input name="HTML" type="radio" value="Hyper Text Machine Language" ><label>Hyper Text Machine Language</label><br>
+            <input name="HTML" type="radio" value="Hyper Text Market Language" ><label>Hyper Text Market Language</label><br>
+        </div><br>
+        <div class="questioncard">
+            <p class="question">2. What is CSS?</p>
+            <input name="CSS" type="radio" value="Class style sheet" ><label>Class style sheet</label><br>
+            <input name="CSS" type="radio" value="Cascading style sheet" ><label>Cascading style sheet</label><br>
+            <input name="CSS" type="radio" value="Coal style sheet" ><label>Coal style sheet</label><br>
+            <input name="CSS" type="radio" value="Consequitive style sheet" ><label>Consequitive style sheet</label><br>
+        </div><br>
+        <div class="questioncard">
+            <p class="question">3. Use of Javascript?</p>
+            <input name="JAVA" type="radio" value="Structure" ><label>Structure</label><br>
+            <input name="JAVA" type="radio" value="Syle" ><label>Syle</label><br>
+            <input name="JAVA" type="radio" value="Behavior" ><label>Behavior</label><br>
+            <input name="JAVA" type="radio" value="All of the above" ><label>All of the above</label><br>
+        </div><br>
+        <div class="questioncard">
+            <p class="question">4. Who is the prime mininster of India?</p>
+            <input name="QC" type="radio" value="Narendra modi" ><label>Narendra modi</label><br>
+            <input name="QC" type="radio" value="Pinarayi vijayan" ><label>Pinarayi vijayan</label><br>
+            <input name="QC" type="radio" value="P Sadasivam" ><label>P Sadasivam</label><br>
+            <input name="QC" type="radio" value="Trump" ><label>Trump</label><br>
+        </div><br>
+        <div class="questioncard">
+            <p class="question">5. Who is the chief minister of Kerala of Kerala?</p>
+            <input name="CR" type="radio" value="Narendra modi" ><label>Narendra modi</label><br>
+            <input name="CR" type="radio" value="Pinarayi vijayan" ><label>Pinarayi vijayan</label><br>
+            <input name="CR" type="radio" value="P Sadasivam" ><label>P Sadasivam</label><br>
+            <input name="CR" type="radio" value="Trump" ><label>Trump</label><br>
+        </div><br>
+        <input onclick="calculator()" class="submit" type="submit" value="submit answers">
+   </body>
+    <script>
+        /*Shortcuts
+        i) .question-card(any name) + enter = < div class="question card"></div>
+        ii) .{
+            margin=0
+            padding=0
+        }
+        */
+       function calculator(){
+           var answer_1=document.querySelector("input[type=radio][name=HTML]:checked")
+           var answer_2=document.querySelector("input[type=radio][name=CSS]:checked")
+           var answer_3=document.querySelector("input[type=radio][name=JAVA]:checked")
+           var answer_4=document.querySelector("input[type=radio][name=QC]:checked")
+           var answer_5=document.querySelector("input[type=radio][name=CR]:checked")
+           var score_1=0
+
+           if (answer_1.value=="Hyper Text Markup Language") {
+               score_1=score_1+1
+           }
+           if (answer_2.value=="Cascading style sheet") {
+               score_1=score_1+1 
+           }
+           if (answer_3.value=="Behavior") {
+               score_1=score_1+1
+           }
+           if (answer_4.value=="Narendra modi") {
+               score_1=score_1+1
+           }
+           if (answer_5.value=="Pinarayi vijayan") {
+               score_1=score_1+1
+           }
+           alert("Your final score is "+score_1+" out of 5")
+       }
+    </script>
+    </html>
